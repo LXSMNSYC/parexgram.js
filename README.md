@@ -1,27 +1,27 @@
-# parser.js
+# parexgram.js
 
 🔠 Parsing Expression Grammars for JS
 
 | Platform | Build Status |
 | --- | --- |
-| Linux | [![Build Status](https://travis-ci.org/LXSMNSYC/parser.js.svg?branch=master)](https://travis-ci.org/LXSMNSYC/parser.js) |
-| Windows | [![Build status](https://ci.appveyor.com/api/projects/status/2hs8vhxown8y8k8v?svg=true)](https://ci.appveyor.com/project/LXSMNSYC/parser-js) |
+| Linux | [![Build Status](https://travis-ci.org/LXSMNSYC/parexgram.js.svg?branch=master)](https://travis-ci.org/LXSMNSYC/parexgram.js) |
+| Windows | [![Build status](https://ci.appveyor.com/api/projects/status/2hs8vhxown8y8k8v?svg=true)](https://ci.appveyor.com/project/LXSMNSYC/parexgram-js) |
 
 
-[![codecov](https://codecov.io/gh/LXSMNSYC/parser.js/branch/master/graph/badge.svg)](https://codecov.io/gh/LXSMNSYC/parser.js)
+[![codecov](https://codecov.io/gh/LXSMNSYC/parexgram.js/branch/master/graph/badge.svg)](https://codecov.io/gh/LXSMNSYC/parexgram.js)
 
 ## Install
 
 NPM
 
 ```bash
-npm i parser-js
+npm i parexgram-js
 ```
 
 CDN
 
 ```html
-<script style="https://cdn.jsdelivr.net/npm/parser-js/dist/index.min.js"></script>
+<script style="https://cdn.jsdelivr.net/npm/parexgram-js/dist/index.min.js"></script>
 ```
 
 ## Usage
@@ -31,18 +31,18 @@ CDN
 #### CommonJS
 
 ```js
-const Parser = require('parser-js');
+const Parexgram = require('parexgram-js');
 ```
 
 #### Browser
 
-The Browser version provides an object named 'Parser' which you can use to access the provided classes.
+The Browser version provides an object named 'Parexgram' which you can use to access the provided classes.
 
 ### Using the classes
 
 #### Feed
 
-Feed serves as the consumable string for the Parser. Matchers relies on a Feed for extracting/consuming strings. If a Matcher successfully consumes the Feed prefix, the Feed value changes.
+Feed serves as the consumable string for the Parexgram. Matchers relies on a Feed for extracting/consuming strings. If a Matcher successfully consumes the Feed prefix, the Feed value changes.
 
 ```js
 const feed = new Feed('some expression');
@@ -108,11 +108,11 @@ Matcher is an interface used for the above classes. This signifies that the obje
 
 ## Documentation
 
-Online Documentation can be found  at the [official Doc Site](https://lxsmnsyc.github.io/parser.js/).
+Online Documentation can be found  at the [official Doc Site](https://lxsmnsyc.github.io/parexgram.js/).
 
 ## Examples
 
-* [Arithmetic Parser](https://github.com/LXSMNSYC/parser.js/tree/master/example/arithmetic)
+* [Arithmetic Parser](https://github.com/LXSMNSYC/parexgram.js/tree/master/example/arithmetic)
 
 ## Build
 
