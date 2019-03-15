@@ -112,7 +112,7 @@ Online Documentation can be found  at the [official Doc Site](https://lxsmnsyc.g
 
 ## Examples
 
-* [Arithmetic Parser](https://github.com/LXSMNSYC/parexgram.js/tree/master/example/arithmetic)
+* [Arithmetic Parser](https://github.com/LXSMNSYC/arithmetic-parser-demo)
 
 ## Build
 
