@@ -102,6 +102,10 @@ const alpha = new Range('a', 'z');
 console.log(new Quantifier(alpha, 0).parse(feed)); // ['s', 'o', 'm', 'e']
 ```
 
+#### Matcher
+
+Matcher is an interface used for the above classes. This signifies that the object can consume a Feed prefix. You can extend the Matcher to create your own custom Matcher.
+
 ## Documentation
 
 Online Documentation can be found  at the [official Doc Site](https://lxsmnsyc.github.io/parser.js/).
