@@ -34,7 +34,7 @@ const { min } = Math;
 export default class Feed {
   /**
    * Constructs a Feed from a given string.
-   * @param {String} feed 
+   * @param {String} feed
    */
   constructor(feed) {
     /**
