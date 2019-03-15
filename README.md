@@ -102,9 +102,13 @@ const alpha = new Range('a', 'z');
 console.log(new Quantifier(alpha, 0).parse(feed)); // ['s', 'o', 'm', 'e']
 ```
 
-### Documentation
+## Documentation
 
 Online Documentation can be found  at the [official Doc Site](https://lxsmnsyc.github.io/parser.js/).
+
+## Examples
+
+* [Arithmetic Parser](https://github.com/LXSMNSYC/parser.js/tree/master/example/arithmetic)
 
 ## Build
 
