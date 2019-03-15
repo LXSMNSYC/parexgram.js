@@ -1,6 +1,6 @@
 {
   "name": "parexgram-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Parsing Expression Grammar for JS",
   "main": "index.js",
   "scripts": {
