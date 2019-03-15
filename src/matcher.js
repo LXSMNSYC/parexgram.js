@@ -41,7 +41,7 @@ export default class Matcher {
    * @abstract
    */
   // eslint-disable-next-line class-methods-use-this, no-unused-vars
-  parse(_feed) {
+  parse(feed) {
 
   }
 }
