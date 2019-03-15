@@ -1,0 +1,41 @@
+{
+  "name": "parser-js",
+  "version": "0.1.0",
+  "description": "Parsing Expression Grammar for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LXSMNSYC/parser.js.git"
+  },
+  "keywords": [
+    "parser",
+    "lexer",
+    "peg",
+    "grammar"
+  ],
+  "author": "LXSMNSYC (alexis.munsayac@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LXSMNSYC/parser.js/issues"
+  },
+  "homepage": "https://github.com/LXSMNSYC/parser.js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "acorn": "^6.1.1",
+    "esdoc": "^1.1.0",
+    "esdoc-integrate-test-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "rollup": "^1.6.0",
+    "terser": "^3.17.0"
+  }
+}
