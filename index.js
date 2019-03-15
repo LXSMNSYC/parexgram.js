@@ -143,7 +143,7 @@ class Matcher {
    * @abstract
    */
   // eslint-disable-next-line class-methods-use-this, no-unused-vars
-  parse(_feed) {
+  parse(feed) {
 
   }
 }
@@ -475,22 +475,24 @@ class Sequence extends Matcher {
    */
   parse(feed) {
     if (feed instanceof Feed) {
-      const result = [];
-      // eslint-disable-next-line no-restricted-syntax
-      for (const matcher of this.matchers) {
-        const r = matcher.parse(feed);
+      if (this.matchers.length > 0) {
+        const result = [];
+        // eslint-disable-next-line no-restricted-syntax
+        for (const matcher of this.matchers) {
+          const r = matcher.parse(feed);
 
-        const flag = typeof r === 'undefined';
-        if (flag) {
-          revert(feed, result);
-          return undefined;
-        }
+          const flag = typeof r === 'undefined';
+          if (flag) {
+            revert(feed, result);
+            return undefined;
+          }
 
-        if (!flag) {
-          result.push(r);
+          if (!flag) {
+            result.push(r);
+          }
         }
+        return result;
       }
-      return result;
     }
     return undefined;
   }
