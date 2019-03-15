@@ -1,5 +1,5 @@
 {
-  "name": "parser-js",
+  "name": "parexgram-js",
   "version": "0.1.0",
   "description": "Parsing Expression Grammar for JS",
   "main": "index.js",
@@ -7,15 +7,15 @@
     "linux-mocha": "./node_modules/.bin/mocha --require @babel/register -R spec --recursive",
     "linux-test": "./node_modules/.bin/nyc --reporter=html npm run linux-mocha",
     "linux-docs": "./node_modules/.bin/esdoc",
-    "linux-cjs": "./node_modules/.bin/rollup src/index.js --format cjs --name \"Parser\" --file index.js",
-    "linux-browser": "./node_modules/.bin/rollup src/index.js --format iife --name \"Parser\" --file dist/index.js",
+    "linux-cjs": "./node_modules/.bin/rollup src/index.js --format cjs --name \"Parexgram\" --file index.js",
+    "linux-browser": "./node_modules/.bin/rollup src/index.js --format iife --name \"Parexgram\" --file dist/index.js",
     "linux-minify": "npm run linux-browser && ./node_modules/.bin/terser dist/index.js --compress --mangle --output dist/index.min.js",
     "linux-build": "npm run linux-cjs && npm run linux-minify && npm run linux-docs && npm run linux-test",
     "win-mocha": "node node_modules/mocha/bin/mocha --require @babel/register -R spec --recursive",
     "win-test": "node node_modules/nyc/bin/nyc.js --reporter=html npm run win-mocha",
     "win-docs": "node node_modules/esdoc/out/src/ESDocCLI.js",
-    "win-cjs": "node node_modules/.bin/rollup src/index.js --format cjs --name \"Parser\" --file index.js",
-    "win-browser": "node node_modules/.bin/rollup src/index.js --format iife --name \"Parser\" --file dist/index.js",
+    "win-cjs": "node node_modules/.bin/rollup src/index.js --format cjs --name \"Parexgram\" --file index.js",
+    "win-browser": "node node_modules/.bin/rollup src/index.js --format iife --name \"Parexgram\" --file dist/index.js",
     "win-minify": "npm run win-browser && node node_modules/.bin/terser dist/index.js --compress --mangle --output dist/index.min.js",
     "win-build": "npm run win-cjs && npm run win-minify && npm run win-docs && npm run win-test",
     "mocha": "npm run linux-mocha || npm run win-mocha",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LXSMNSYC/parser.js.git"
+    "url": "git+https://github.com/LXSMNSYC/parexgram.js.git"
   },
   "keywords": [
     "parser",
@@ -39,9 +39,9 @@
   "author": "LXSMNSYC (alexis.munsayac@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LXSMNSYC/parser.js/issues"
+    "url": "https://github.com/LXSMNSYC/parexgram.js/issues"
   },
-  "homepage": "https://github.com/LXSMNSYC/parser.js#readme",
+  "homepage": "https://github.com/LXSMNSYC/parexgram.js#readme",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
