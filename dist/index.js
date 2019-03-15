@@ -1,4 +1,4 @@
-var Parser = (function (exports) {
+var Parexgram = (function (exports) {
   'use strict';
 
   /**
