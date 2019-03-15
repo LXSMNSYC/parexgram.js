@@ -2,13 +2,20 @@
 
 🔠 Parsing Expression Grammars for JS
 
+[![NPM](https://nodei.co/npm/parexgram-js.png)](https://nodei.co/npm/parexgram-js/)
+
+[![](https://data.jsdelivr.com/v1/package/npm/parexgram-js/badge)](https://www.jsdelivr.com/package/npm/parexgram-js)
+[![HitCount](http://hits.dwyl.io/lxsmnsyc/parexgram.js.svg)](http://hits.dwyl.io/lxsmnsyc/parexgram.js)
+
 | Platform | Build Status |
 | --- | --- |
 | Linux | [![Build Status](https://travis-ci.org/LXSMNSYC/parexgram.js.svg?branch=master)](https://travis-ci.org/LXSMNSYC/parexgram.js) |
-| Windows | [![Build status](https://ci.appveyor.com/api/projects/status/2hs8vhxown8y8k8v?svg=true)](https://ci.appveyor.com/project/LXSMNSYC/parexgram-js) |
-
+| Windows | [![Build status](https://ci.appveyor.com/api/projects/status/yrqmaodw7215oj6a?svg=true)](https://ci.appveyor.com/project/LXSMNSYC/parexgram-js) |
 
 [![codecov](https://codecov.io/gh/LXSMNSYC/parexgram.js/branch/master/graph/badge.svg)](https://codecov.io/gh/LXSMNSYC/parexgram.js)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/LXSMNSYC/parexgram.js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/LXSMNSYC/parexgram.js?targetFile=package.json)
+[![devDependencies Status](https://david-dm.org/lxsmnsyc/parexgram.js/dev-status.svg)](https://david-dm.org/lxsmnsyc/parexgram.js?type=dev)
 
 ## Install
 
