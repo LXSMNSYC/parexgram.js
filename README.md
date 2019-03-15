@@ -31,7 +31,7 @@ CDN
 #### CommonJS
 
 ```js
-const Parser = require('parser-js);
+const Parser = require('parser-js');
 ```
 
 #### Browser
