@@ -89,7 +89,7 @@ export default class Feed {
   /**
    * @desc
    * Get the unconsumed size of the Feed
-   * @return {Number}
+   * @type {Number}
    */
   get size() {
     return this.feedSize - this.cursor;
