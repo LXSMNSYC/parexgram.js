@@ -1,7 +1,9 @@
 
 /* eslint-disable no-undef */
 import assert from 'assert';
-import { CharSet, Quantifier, Feed, Range } from '../src';
+import {
+  CharSet, Quantifier, Feed, Range,
+} from '../src';
 
 describe('Quantifier', () => {
   /**
