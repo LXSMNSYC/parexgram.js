@@ -74,6 +74,23 @@ describe('Feed', () => {
   /**
    *
    */
+  describe('#revert', () => {
+    /**
+     *
+     */
+    it('should revert successfully.', () => {
+      /**
+       *
+       */
+      const f = new Feed('Hello World');
+      f.eat('Hello');
+      f.revert(5);
+      assert(f.eat('Hello'));
+    });
+  });
+  /**
+   *
+   */
   describe('#size', () => {
     /**
      *
