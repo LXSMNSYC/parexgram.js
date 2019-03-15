@@ -25,7 +25,7 @@
  * @author Alexis Munsayac <alexis.munsayac@gmail.com>
  * @copyright Alexis Munsayac 2019
  */
-const { min } = Math;
+const { min, max } = Math;
 
 /**
  * @desc
@@ -34,7 +34,7 @@ const { min } = Math;
 export default class Feed {
   /**
    * Constructs a Feed from a given string.
-   * @param {String} feed
+   * @param {!String} feed
    */
   constructor(feed) {
     /**
@@ -54,7 +54,7 @@ export default class Feed {
   /**
    * @desc
    * Get the first set of string from the Feed
-   * @param {number} size
+   * @param {!number} size
    * @return {String}
    */
   peek(size) {
@@ -66,7 +66,7 @@ export default class Feed {
    * @desc
    * Checks if the given string is a prefix of the Feed,
    * then eats the prefix.
-   * @param {String} str
+   * @param {!String} str
    * @return {Boolean}
    */
   eat(str) {
@@ -76,6 +76,14 @@ export default class Feed {
       return true;
     }
     return false;
+  }
+
+  /**
+   * Reverts the previous feed state.
+   * @param {Number} size
+   */
+  revert(size) {
+    this.cursor = max(this.cursor - size, 0);
   }
 
   /**
