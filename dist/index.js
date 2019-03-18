@@ -306,52 +306,6 @@ var Parexgram = (function (exports) {
    * @author Alexis Munsayac <alexis.munsayac@gmail.com>
    * @copyright Alexis Munsayac 2019
    */
-
-  /**
-   * @ignore
-   * @param {*} feed
-   * @param {*} result
-   */
-  const revert = (feed, result) => {
-    const size = result.length - 1;
-    for (let i = size; i >= 0; i -= 1) {
-      const r = result[i];
-      if (r instanceof Array) {
-        revert(feed, r);
-      }
-      if (typeof r === 'string') {
-        feed.revert(r.length);
-      }
-    }
-  };
-
-  /**
-   * @license
-   * MIT License
-   *
-   * Copyright (c) 2019 Alexis Munsayac
-   * Permission is hereby granted, free of charge, to any person obtaining a copy
-   * of this software and associated documentation files (the "Software"), to deal
-   * in the Software without restriction, including without limitation the rights
-   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-   * copies of the Software, and to permit persons to whom the Software is
-   * furnished to do so, subject to the following conditions:
-   *
-   * The above copyright notice and this permission notice shall be included in all
-   * copies or substantial portions of the Software.
-   *
-   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-   * SOFTWARE.
-   *
-   *
-   * @author Alexis Munsayac <alexis.munsayac@gmail.com>
-   * @copyright Alexis Munsayac 2019
-   */
   /**
    * @desc
    * Represents a pattern quantifier which collects
@@ -398,6 +352,7 @@ var Parexgram = (function (exports) {
         const isNumber = typeof max === 'number';
         if (matcher instanceof Matcher) {
           const result = [];
+          const { cursor } = feed;
           let parsed = matcher.parse(feed);
           let count = 0;
           while (typeof parsed !== 'undefined') {
@@ -411,7 +366,8 @@ var Parexgram = (function (exports) {
           if (count >= min) {
             return result;
           }
-          revert(feed, result);
+          // eslint-disable-next-line no-param-reassign
+          feed.cursor = cursor;
         }
       }
       return undefined;
@@ -561,13 +517,15 @@ var Parexgram = (function (exports) {
       if (feed instanceof Feed) {
         if (this.matchers.length > 0) {
           const result = [];
+          const { cursor } = feed;
           // eslint-disable-next-line no-restricted-syntax
           for (const matcher of this.matchers) {
             const r = matcher.parse(feed);
 
             const flag = typeof r === 'undefined';
             if (flag) {
-              revert(feed, result);
+              // eslint-disable-next-line no-param-reassign
+              feed.cursor = cursor;
               return undefined;
             }
 
