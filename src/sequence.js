@@ -27,7 +27,6 @@
  */
 import Feed from './feed';
 import Matcher from './matcher';
-import revert from './utils';
 
 
 /**
@@ -59,13 +58,15 @@ export default class Sequence extends Matcher {
     if (feed instanceof Feed) {
       if (this.matchers.length > 0) {
         const result = [];
+        const { cursor } = feed;
         // eslint-disable-next-line no-restricted-syntax
         for (const matcher of this.matchers) {
           const r = matcher.parse(feed);
 
           const flag = typeof r === 'undefined';
           if (flag) {
-            revert(feed, result);
+            // eslint-disable-next-line no-param-reassign
+            feed.cursor = cursor;
             return undefined;
           }
 
