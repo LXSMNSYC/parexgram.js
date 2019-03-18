@@ -59,7 +59,7 @@ export default class Feed {
    */
   peek(size) {
     const { cursor } = this;
-    return this.feed.substring(cursor, min(cursor + size, this.feedSize));
+    return this.feed.substring(cursor, typeof size !== 'undefined' ? min(cursor + size, this.feedSize) : this.feedSize);
   }
 
   /**
