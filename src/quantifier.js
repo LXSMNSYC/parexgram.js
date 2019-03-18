@@ -27,7 +27,6 @@
  */
 import Feed from './feed';
 import Matcher from './matcher';
-import revert from './utils';
 /**
  * @desc
  * Represents a pattern quantifier which collects
@@ -74,6 +73,7 @@ export default class Quantifier extends Matcher {
       const isNumber = typeof max === 'number';
       if (matcher instanceof Matcher) {
         const result = [];
+        const { cursor } = feed;
         let parsed = matcher.parse(feed);
         let count = 0;
         while (typeof parsed !== 'undefined') {
@@ -87,7 +87,8 @@ export default class Quantifier extends Matcher {
         if (count >= min) {
           return result;
         }
-        revert(feed, result);
+        // eslint-disable-next-line no-param-reassign
+        feed.cursor = cursor;
       }
     }
     return undefined;
