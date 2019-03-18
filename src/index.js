@@ -35,5 +35,7 @@ export { default as Range } from './range';
 
 export { default as Quantifier } from './quantifier';
 
+export { default as Pattern } from './pattern';
+
 export { default as Sequence } from './sequence';
 export { default as Alternation } from './alternation';
