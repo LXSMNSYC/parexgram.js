@@ -76,7 +76,7 @@ export default class Pattern extends Matcher {
         if (this.value.test(r)) {
           const m = this.value.exec(r);
           if (m !== null && r.startsWith(m[0])) {
-            feed.eat(m);
+            feed.eat(m[0]);
             return m[0];
           }
         }
