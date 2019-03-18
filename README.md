@@ -109,6 +109,16 @@ const alpha = new Range('a', 'z');
 console.log(new Quantifier(alpha, 0).parse(feed)); // ['s', 'o', 'm', 'e']
 ```
 
+#### Pattern
+
+Pattern is a Matcher class which extracts the Feed prefix if it matches the RegExp provided.
+
+```js
+const feed = new Feed('some expression');
+console.log(new Pattern('[a-z]+').parse(feed)); // ['s', 'o', 'm', 'e']
+```
+
+
 #### Matcher
 
 Matcher is an interface used for the above classes. This signifies that the object can consume a Feed prefix. You can extend the Matcher to create your own custom Matcher.
@@ -134,3 +144,10 @@ To build the docs, coverages, commonjs and browser module:
 ```bash
 npm run build
 ```
+
+## Changelogs
+
+0.2.0
+
+* Feed.peek(undefined) returns the rest of the Feed string.
+* Pattern class which allows the use of RegExp for matching Feeds.
